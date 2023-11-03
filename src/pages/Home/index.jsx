@@ -6,7 +6,7 @@ import { Link, } from "react-router-dom"
 
  
 
-
+              
 const Home = () => {
   const [entriesList, setEntriesList] = useState({})
 
@@ -15,7 +15,7 @@ const Home = () => {
 
   useEffect(() =>{
     entriesRef.on('value', snapshot => {
-      console.log(snapshot.val())
+      console.log(snapshot.val())     
       setEntriesList(snapshot.val())
       })
   },[])
